@@ -60,7 +60,7 @@ Handled loading states and errors
 Flow:
 Frontend UI → /chat API → FastAPI → RAG Pipeline → Response → UI Display
 🔗 Full System Architecture
-                ┌────────────────────┐
+                             ┌────────────────────┐
                 │   Frontend UI      │
                 │ (React / HTML/JS)  │
                 └─────────┬──────────┘
