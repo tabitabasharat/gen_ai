@@ -60,31 +60,8 @@ Handled loading states and errors
 Flow:
 Frontend UI → /chat API → FastAPI → RAG Pipeline → Response → UI Display
 🔗 Full System Architecture
-                             ┌────────────────────┐
-                │   Frontend UI      │
-                │ (React / HTML/JS)  │
-                └─────────┬──────────┘
-                          │
-                          ▼
-                ┌────────────────────┐
-                │   FastAPI Backend  │
-                │  /chat /ingest API │
-                └─────────┬──────────┘
-                          │
-                          ▼
-        ┌──────────────────────────────────┐
-        │        RAG Pipeline             │
-        │  - Embeddings                  │
-        │  - FAISS Search                │
-        │  - Context Retrieval           │
-        │  - LLM Response Generation     │
-        └──────────────────────────────────┘
-                          │
-                          ▼
-                ┌────────────────────┐
-                │  PDF Documents     │
-                │  Knowledge Base    │
-                └────────────────────┘
+<img width="338" height="420" alt="image" src="https://github.com/user-attachments/assets/51cdc075-7bbd-4179-886b-8f6b89a664e2" />
+
 
 🧩 Tech Stack
 Python 🐍
