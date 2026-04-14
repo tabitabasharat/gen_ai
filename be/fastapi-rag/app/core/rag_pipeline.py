@@ -4,20 +4,20 @@ from app.services.vectorstore import index, chunks, search
 from app.core.llm import generate_answer
 
 
-def retrieve(question):
-    query_vec = np.array(get_embedding(question)).astype("float32").reshape(1, -1)
+    def retrieve(question):
+        query_vec = np.array(get_embedding(question)).astype("float32").reshape(1, -1)
 
-    scores, I = index.search(query_vec, k=3)
+        scores, I = index.search(query_vec, k=3)
 
-    valid_chunks = []
-    valid_scores = []
+        valid_chunks = []
+        valid_scores = []
 
-    for i, score in zip(I[0], scores[0]):
-        if i < len(chunks):
-            valid_chunks.append(chunks[i])
-            valid_scores.append(float(score))
+        for i, score in zip(I[0], scores[0]):
+            if i < len(chunks):
+                valid_chunks.append(chunks[i])
+                valid_scores.append(float(score))
 
-    return valid_chunks, valid_scores
+        return valid_chunks, valid_scores
 
 
 def ask(question: str):
