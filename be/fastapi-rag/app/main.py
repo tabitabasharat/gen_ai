@@ -8,7 +8,7 @@ app = FastAPI(title="RAG FastAPI Backend")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # for dev only
+    allow_origins=["http://localhost:3000"],  # for dev only
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],

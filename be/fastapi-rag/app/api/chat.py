@@ -6,6 +6,6 @@ router = APIRouter()
 
 @router.post("/chat")
 async def chat(req: ChatRequest):
-    # If ask() is a regular function, this is fine. 
-    # If ask() calls an OpenAI/LLM API, it should ideally be async.
-    return ask(req.question)
+    answer = ask(req.query)   # 👈 THIS is your backend logic
+
+    return {"answer": answer}  # 👈 return AI response
