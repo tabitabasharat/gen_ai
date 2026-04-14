@@ -3,8 +3,7 @@ from app.services.embeddings import get_embedding
 from app.services.vectorstore import index, chunks, search
 from app.core.llm import generate_answer
 
-
-    def retrieve(question):
+def retrieve(question):
         query_vec = np.array(get_embedding(question)).astype("float32").reshape(1, -1)
 
         scores, I = index.search(query_vec, k=3)
