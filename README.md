@@ -1,15 +1,20 @@
-📚 RAG Project (Notebook → FastAPI → Frontend Integration)
-🚀 Overview
+📚 **RAG Project** (Notebook → FastAPI → Frontend Integration)
+
+🚀** Overview**
 
 This project demonstrates a complete Retrieval-Augmented Generation (RAG) system built in multiple stages:
 
-First we developed and tested the system in a Jupyter Notebook
-Then we converted the logic into a FastAPI backend
-Finally, we integrated the backend with a frontend application
+1.First we developed and tested the system in a Jupyter Notebook
+
+2.Then we converted the logic into a FastAPI backend
+
+3.Finally, we integrated the backend with a frontend application
 
 The goal is to understand how a RAG pipeline moves from research → production.
 
-🧠 Project Workflow
+
+🧠 **Project Workflow**
+
 1️⃣ Notebook Phase (Research & Experimentation)
 
 In the first step, we built the entire RAG pipeline inside a Jupyter Notebook.
